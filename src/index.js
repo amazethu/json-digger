@@ -142,6 +142,7 @@ export default class JSONDigger {
       let nodes = [];
       function findNodes(obj, conditions, callback) {
         if (!_this.count) {
+          callback(null, [])
           return;
         }
         if (_this.matchConditions(obj, conditions)) {
